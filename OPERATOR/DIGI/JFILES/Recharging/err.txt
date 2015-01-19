@@ -1,0 +1,27 @@
+**********************************************************
+**     Thread Started With The Following Configuration  **
+**              File to be Read is DBCONFIG.CFG          **
+IP: 172.28.106.4 DATABASE :master_db USER :root PWD:D1g1r00t@!23
+Initiallizing DB
+checking another instance
+Reading configuration file config/Service.cfg...
+Setting default parameters...
+NO_OF_SERVER ==3
+SUBSCRIPTION_TABLE[1]= dm_radio.tbl_digi_subscription
+RESUB_PROCEDURE[1]= dm_radio.DIGI_RESUB
+UNSUB_PROCEDURE[1]= dm_radio.DIGI_UNSUB
+DNIS_ARRY[1]= 2000
+GRACE_PERIOD[1]= 45
+SUBSCRIPTION_TABLE[2]= dm_radio_bengali.tbl_digi_subscription
+RESUB_PROCEDURE[2]= dm_radio_bengali.DIGI_RESUB
+UNSUB_PROCEDURE[2]= dm_radio_bengali.DIGI_UNSUB
+DNIS_ARRY[2]= 2000
+GRACE_PERIOD[2]= 45
+SUBSCRIPTION_TABLE[3]= dm_radio_nepali.tbl_digi_subscription
+RESUB_PROCEDURE[3]= dm_radio_nepali.DIGI_RESUB
+UNSUB_PROCEDURE[3]= dm_radio_nepali.DIGI_UNSUB
+DNIS_ARRY[3]= 2000
+GRACE_PERIOD[3]= 45
+Error:java.lang.NullPointerException
+Error:java.lang.NullPointerException
+Error:java.lang.NullPointerException
