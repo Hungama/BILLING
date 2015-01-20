@@ -1,0 +1,19 @@
+#Mysql Type4 JDBC Driver Properties
+db.driverclass=com.mysql.jdbc.Driver
+db.url=jdbc:mysql://10.43.248.137:3306/master_db
+db.user=billing
+db.password=billing@voda#123
+
+kannel.url=http://10.43.248.137:13131/cgi-bin/sendsms?username=vod_54646&password=vod_54646&to='<MSISDN>'&from='<SC>'&text='<MSG>'
+kannel.url1=http://10.43.248.137:13131/cgi-bin/sendsms?username=vod1_54646&password=vod1_54646&to='<MSISDN>'&from='<SC>'&text='<MSG>'
+kannel.url2=http://10.43.248.137:13131/cgi-bin/sendsms?username=vod2_54646&password=vod2_54646&to='<MSISDN>'&from='<SC>'&text='<MSG>'
+kannel.url3=http://10.43.248.137:13131/cgi-bin/sendsms?username=vod3_54646&password=vod3_54646&to='<MSISDN>'&from='<SC>'&text='<MSG>'
+Kannel.QcheckUrl=http://10.43.248.137/kannel-monitor/indexnew.php?smsc_id=
+
+Query.1=select count(*) cnt from tbl_sms where status=0 and flag=1 and message is not null and case when (hour(now())>=19 or hour(now())<=8) then type!='sms-promo' else type in('TXT','sms-promo','RNT') end
+Query.2=select * from tbl_sms where status=0 and flag=1 and message is not null and case when (hour(now())>=19 or hour(now())<=8) then type!='sms-promo' else type in('TXT','sms-promo','RNT') end order by priority desc limit 
+KannelQ.threshold=500
+
+#Log4jPath=D:\\MyEclipse 8.5\\SMSPushKannel\\conf\\log4j.properties
+
+
